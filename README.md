@@ -151,11 +151,13 @@ On garde tous les chemins pour tous les labels à l'exception de while.
 Pour les chemins passant par un noeud while on ne garde que les chemins qui re-passent au maximum i-1 fois par ce même noeud.
 
 ## TDEF
+Pour chaque variable, nous obtenons une liste de noeuds où l'on assigne une variable.
 
 ## TU
 On fait une liste des noeuds où l'on assigne une variable. On garde un chemin par élement de cette liste qui évalue à True ou False une condition avant l'assignation suivante (i.e. l'élement suivant dans la liste)
 
 ## TDU
+Pour chaque variable, on garde les chemins composés d'une définition (assign) et d'une utilisation (if, while), sans redéfinition.
 
 ## TC
 On "casse" les expressions booléennes dans les conditions des noeuds if et while en les exprimant sous la forme normale conjonctive et on en fait une liste . On garde au moins un chemin par évaluation de chacun des éléments de cette liste (ou bien True ou bien False).
